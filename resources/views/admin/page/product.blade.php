@@ -72,23 +72,48 @@
     <div class="tampilEditData" style="display: none;"></div>
 
     <h1>Products Report</h1>
-    <table border="1" width="100%">
+    <table class="table table-responsive table-striped">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Name</th>
+                <th>No</th>
+                <th>Foto</th>
+                <th>Date In</th>
+                <th>SKU</th>
+                <th>Product Name</th>
+                <th>Category</th>
                 <th>Price</th>
-                <!-- Add more columns as needed -->
+                <th>Stock</th>
+                <th>#</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($products as $product)
-                <tr>
-                    <td>{{ $product->id }}</td>
-                    <td>{{ $product->name }}</td>
-                    <td>{{ $product->price }}</td>
-                    <!-- Add more columns as needed -->
+            @if ($data->isEmpty())
+                <tr class="text-center">
+                    <td colspan="9">Belum ada barang</td>
                 </tr>
+            @else
+                @foreach ($data as $y => $x)
+                    <tr class="align-middle">
+                        <td>{{ ++$y }}</td>
+                        <td>
+                            <img src="{{ asset('storage/product/' . $x->foto) }}" style="width:100px;">
+                        </td>
+                        <td>{{ $x->created_at }}</td>
+                        <td>{{ $x->sku }}</td>
+                        <td>{{ $x->nama_product }}</td>
+                        <td>{{ $x->type . ' ' . $x->kategory }}</td>
+                        <td>{{ $x->harga }}</td>
+                        <td>{{ $x->quantity }}</td>
+                        <td>
+                            <input type="hidden" id="sku" value="{{ $x->sku }}">
+                            <button class="btn btn-info editModal" data-id="{{ $x->id }}">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger deleteData" data-id="{{ $x->id }}">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
             @endforeach
         </tbody>
     </table>
