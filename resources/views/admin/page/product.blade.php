@@ -52,7 +52,6 @@
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
                                 </td>
-
                             </tr>
                         @endforeach
                     @endif
@@ -68,8 +67,31 @@
             </div>
         </div>
     </div>
+
     <div class="tampilData" style="display: none;"></div>
     <div class="tampilEditData" style="display: none;"></div>
+
+    <h1>Products Report</h1>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($products as $product)
+                <tr>
+                    <td>{{ $product->id }}</td>
+                    <td>{{ $product->name }}</td>
+                    <td>{{ $product->price }}</td>
+                    <!-- Add more columns as needed -->
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 
     <script>
         $('#addData').click(function() {
@@ -101,6 +123,7 @@
                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
             },
         });
+
         $('.deleteData').click(function(e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -121,8 +144,8 @@
             });
 
             Swal.fire({
-                title: 'Hapus data ?',
-                text: "Kamu yakin untuk menghapus SKU " + sku + " ?",
+                title: 'Hapus data?',
+                text: "Kamu yakin untuk menghapus SKU " + sku + "?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -143,7 +166,6 @@
                             }
                         },
                         error: function(xhr, status, error) {
-                            // Tampilkan notifikasi error jika terjadi kesalahan
                             Swal.fire({
                                 title: 'Error',
                                 text: 'Terjadi kesalahan saat menghapus data',
@@ -152,7 +174,7 @@
                         }
                     });
                 }
-            })
+            });
         });
     </script>
 @endsection
