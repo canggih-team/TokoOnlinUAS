@@ -1,11 +1,9 @@
 <div class="d-flex justify-content-between gap-5 pt-4 mt-5">
     <div class="title-left w-25">
         <div class="header-title fs-4 mb-2 font-weight-bolder">
-            TOKO ONLINE KITA
+            Canggih Clothing
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repudiandae optio a illo
-            accusantium deserunt officiis distinctio suscipit ut eveniet, deleniti non aut eaque, ipsum
-            quaerat, natus nisi asperiores amet.</p>
+        <p>"Berdiri sejak tahun 1933, Toko Canggih Clothing telah menjadi salah satu pemimpin di industri fashion lokal. Kami berkomitmen untuk menyediakan pilihan terbaik dari koleksi pakaian dan aksesori untuk segala usia dan gaya."</p>
     </div>
     <div class="title-middle w-25">
         <div class="header-title fs-4 mb-2 font-weight-bolder">
@@ -14,15 +12,14 @@
         <ul class="list-unstyled">
             <li>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dignissimos quasi
-                    nobis autem explicabo! Voluptas!
+                    "Gaya Canggih, Kualitas Canggih!".
                 </p>
             </li>
             <li>
-                <p>091231231232</p>
+                <p>0811-3278-005</p>
             </li>
             <li>
-                p2312321312313
+                Jl. Ketintang No.156, Ketintang, Kec. Gayungan, Surabaya, Jawa Timur 60231
             </li>
         </ul>
     </div>
@@ -39,5 +36,5 @@
     </div>
 </div>
 <div class="text-center p-lg-4 mt-3">
-    Copy right @ StudyKuy 2023</i>
+    Copyright Kelompok 8 IS-05-04 </i>
 </div>
