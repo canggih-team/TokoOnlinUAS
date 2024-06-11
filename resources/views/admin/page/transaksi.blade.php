@@ -59,21 +59,21 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($data as $x => $item)
-                <tr>
-                    <td>{{ ++$x }}</td>
-                            <td>{{ $item->created_at }}</td>
-                            <td>{{ $item->code_transaksi }}</td>
-                            <td>{{ $item->nama_customer }}</td>
-                            <td>{{ $item->alamat }}</td>
-                            <td>{{ $item->total_harga }}</td>
-                            <td>
-                                <span class="align-middle {{ $item->status === 'Paid' ? 'badge bg-success text-white' : 'badge bg-danger text-white' }}">
-                                    {{ $item->status }}
-                                </span>
-                            </td>
-                </tr>
-            @endforeach
+            @foreach($transactions as $x => $transaction)
+            <tr>
+                <td>{{ ++$x }}</td>
+                <td>{{ $transaction->created_at }}</td>
+                <td>{{ $transaction->code_transaksi }}</td>
+                <td>{{ $transaction->nama_customer }}</td>
+                <td>{{ $transaction->alamat }}</td>
+                <td>{{ $transaction->total_harga }}</td>
+                <td>
+                    <span class="align-middle {{ $transaction->status === 'Paid' ? 'badge bg-success text-white' : 'badge bg-danger text-white' }}">
+                        {{ $transaction->status }}
+                    </span>
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 @endsection
