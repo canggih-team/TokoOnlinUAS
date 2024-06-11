@@ -113,7 +113,7 @@
                 @foreach ($data as $p)
                     <div class="card" style="width:200px;">
                         <div class="card-header m-auto">
-                            <img src="{{ asset('storage/product/' . $p->foto) }}" alt="baju 1"
+                            <img src="{{ asset('storage/product/' . $p->foto) }}" alt=""
                                 style="width: 100%;height:130px; object-fit: cover; padding:0;">
                         </div>
                         <div class="card-body">
