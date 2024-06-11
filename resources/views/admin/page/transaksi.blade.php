@@ -49,14 +49,17 @@
     <table border="1" width="100%">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>No</th>
                 <th>Date</th>
-                <th>Amount</th>
-                <!-- Add more columns as needed -->
+                <th>Id Transaksi</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Nilai Trx</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($transactions as $transaction)
+            @foreach($data as $x => $item)
                 <tr>
                     <td>{{ ++$x }}</td>
                             <td>{{ $item->created_at }}</td>
