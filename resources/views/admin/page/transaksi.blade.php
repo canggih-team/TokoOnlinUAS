@@ -58,10 +58,17 @@
         <tbody>
             @foreach($transactions as $transaction)
                 <tr>
-                    <td>{{ $transaction->id }}</td>
-                    <td>{{ $transaction->date }}</td>
-                    <td>{{ $transaction->amount }}</td>
-                    <!-- Add more columns as needed -->
+                    <td>{{ ++$x }}</td>
+                            <td>{{ $item->created_at }}</td>
+                            <td>{{ $item->code_transaksi }}</td>
+                            <td>{{ $item->nama_customer }}</td>
+                            <td>{{ $item->alamat }}</td>
+                            <td>{{ $item->total_harga }}</td>
+                            <td>
+                                <span class="align-middle {{ $item->status === 'Paid' ? 'badge bg-success text-white' : 'badge bg-danger text-white' }}">
+                                    {{ $item->status }}
+                                </span>
+                            </td>
                 </tr>
             @endforeach
         </tbody>
