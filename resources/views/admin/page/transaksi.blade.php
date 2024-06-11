@@ -26,8 +26,7 @@
                             <td>{{ $item->alamat }}</td>
                             <td>{{ $item->total_harga }}</td>
                             <td>
-                                <span
-                                    class="align-middle {{ $item->status === 'Paid' ? 'badge bg-success text-white' : 'badge bg-danger text-white' }}">
+                                <span class="align-middle {{ $item->status === 'Paid' ? 'badge bg-success text-white' : 'badge bg-danger text-white' }}">
                                     {{ $item->status }}
                                 </span>
                             </td>
@@ -45,4 +44,26 @@
             </div>
         </div>
     </div>
+
+    <h1>Transactions Report</h1>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($transactions as $transaction)
+                <tr>
+                    <td>{{ $transaction->id }}</td>
+                    <td>{{ $transaction->date }}</td>
+                    <td>{{ $transaction->amount }}</td>
+                    <!-- Add more columns as needed -->
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection

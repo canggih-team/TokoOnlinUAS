@@ -6,6 +6,7 @@ use App\Http\Controllers\TransaksiAdminController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,4 +60,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::DELETE('/admin/deleteData/{id}', [ProductController::class, 'destroy'])->name('deleteData');
 
     Route::GET('/admin/transaksi', [TransaksiAdminController::class, 'index'])->name('transaksi.admin');
+
+    Route::post('/export/transaksi', [ExportController::class, 'exportTransaksi'])->name('export.transaksi');
+    Route::post('/export/product', [ExportController::class, 'exportProduct'])->name('export.product');
 });
