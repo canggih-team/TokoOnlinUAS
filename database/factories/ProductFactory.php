@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\product>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
  */
 class ProductFactory extends Factory
 {
@@ -17,9 +17,15 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
+        // Array of example clothing names
+        $clothingNames = [
+            "Celana Pria", "Baju Pria", "Aksesoris Pria", "Celana Wanita", "Baju Wanita",
+            "Aksesoris Wanita", "Celana Anak-anak", "Baju Anak-anak", "Aksesoris Anak-anak",
+        ];
+
         return [
             'sku'                   => Str::random(10),
-            'nama_product'          => fake()->name(),
+            'nama_product'          => $this->faker->randomElement($clothingNames),
             'type'                  => "Celana",
             'kategory'              => "Pria",
             'harga'                 => 100000,
