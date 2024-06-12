@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #025464">
     <div class="container">
-        <a class="navbar-brand" href="#">Canggih Clothing</a>
+        <a class="navbar-brand" href="#">Toko Pakaian Canggih</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -15,9 +15,7 @@
                     <a class="nav-link {{ Request::path() == 'shop' ? 'active' : '' }}" href="/shop">Shop</a>
                 </li>
                 <li class="nav-item">
-
                     <a class="nav-link {{ Request::path() == 'contact' ? 'active' : '' }}" href="/contact">About Us</a>
-
                 </li>
                 @auth
                     <div class="select" tabindex="0" role="button">

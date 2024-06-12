@@ -7,6 +7,7 @@
                 <h4 style="font-size: 16px;">Export data transaksi</h4>
             </div>
             <div class="card-body">
+
                 <form action="{{ route('export.transaksi') }}" method="POST">
                     @csrf
                     <div class="d-flex flex-row gap-3">
@@ -21,6 +22,7 @@
                     </div>
                     <button type="submit" class="btn btn-success mt-4">Export</button>
                 </form>
+
             </div>
         </div>
         <div class="card">
@@ -28,6 +30,7 @@
                 <h4 style="font-size: 16px;">Export data product</h4>
             </div>
             <div class="card-body">
+
                 <form action="{{ route('export.product') }}" method="POST">
                     @csrf
                     <div class="d-flex flex-row gap-3">
@@ -42,6 +45,7 @@
                     </div>
                     <button type="submit" class="btn btn-success mt-4">Export</button>
                 </form>
+
             </div>
         </div>
     </div>

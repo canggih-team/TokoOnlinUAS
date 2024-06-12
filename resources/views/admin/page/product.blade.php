@@ -68,12 +68,8 @@
             </div>
         </div>
     </div>
-
     <div class="tampilData" style="display: none;"></div>
     <div class="tampilEditData" style="display: none;"></div>
-
-
-
 
     <script>
         $('#addData').click(function() {
@@ -105,7 +101,6 @@
                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
             },
         });
-
         $('.deleteData').click(function(e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -126,10 +121,8 @@
             });
 
             Swal.fire({
-
                 title: 'Hapus data ?',
                 text: "Kamu yakin untuk menghapus SKU " + sku + " ?",
-
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -150,9 +143,7 @@
                             }
                         },
                         error: function(xhr, status, error) {
-
                             // Tampilkan notifikasi error jika terjadi kesalahan
-
                             Swal.fire({
                                 title: 'Error',
                                 text: 'Terjadi kesalahan saat menghapus data',
@@ -161,9 +152,7 @@
                         }
                     });
                 }
-
             })
-
         });
     </script>
 @endsection
