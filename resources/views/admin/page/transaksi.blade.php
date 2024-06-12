@@ -45,4 +45,12 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+        </tbody>
+    </table>
+
 @endsection

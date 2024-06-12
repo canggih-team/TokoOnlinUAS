@@ -47,7 +47,6 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/logout', [Controller::class, 'logout'])->name('logout');
     Route::get('/admin/report', [Controller::class, 'report'])->name('report');
     Route::get('/admin/addModal', [ProductController::class, 'addModal'])->name('addModal');
-    // Route::get('/admin/addModal', [ProductAdminController::class, 'addModal'])->name('addModal');
 
     Route::GET('/admin/user_management', [UserController::class, 'index'])->name('userManagement');
     Route::GET('/admin/user_management/addModalUser', [UserController::class, 'addModalUser'])->name('addModalUser');
@@ -61,10 +60,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::PUT('/admin/updateData/{id}', [ProductController::class, 'update'])->name('updateData');
     Route::DELETE('/admin/deleteData/{id}', [ProductController::class, 'destroy'])->name('deleteData');
 
-    // Route::POST('/admin/addData', [ProductAdminController::class, 'store'])->name('addData');
-    // Route::GET('/admin/editModal/{id}', [ProductAdminController::class, 'show'])->name('editModal');
-    // Route::PUT('/admin/updateData/{id}', [ProductAdminController::class, 'update'])->name('updateData');
-    // Route::DELETE('/admin/deleteData/{id}', [ProductAdminController::class, 'destroy'])->name('deleteData');
+
 
     Route::GET('/admin/transaksi', [TransaksiAdminController::class, 'index'])->name('transaksi.admin');
     Route::GET('/admin/product', [ProductAdminController::class, 'index'])->name('product.admin');
