@@ -23,7 +23,9 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     @stack('style')
+
     <title>Toko Pakaian Canggih | {{ $title }}</title>
+
 </head>
 
 <body>
@@ -44,7 +46,10 @@
                     <div class="mb-3 row">
                         <label for="email" class="col-sm-5 col-form-label">Email</label>
                         <div class="col-sm-7">
+
                             <input type="email" class="form-control" id="email" name="email"
+
+
                                 value="" autocomplete="off" autofocus>
                         </div>
                     </div>
@@ -57,6 +62,8 @@
                 </div>
                 <div class="card-footer bg-transparent">
                     <button type="submit" class="btn btn-success w-100 mt-2">Login Now</button>
+
+
                 </div>
             </form>
         </div>

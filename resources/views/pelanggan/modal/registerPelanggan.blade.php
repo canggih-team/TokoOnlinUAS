@@ -9,6 +9,7 @@
                 <form action="{{ route('storePelanggan') }}" method="POST">
                     @csrf
                     <div class="mb-3 row">
+
                         <label for="nama" class="col-sm-3 col-form-label">Nama<span
                                 style="color:red;">*</span></label>
                         <div class="col-sm-9">
@@ -22,6 +23,7 @@
                         <div class="col-sm-9">
                             <input type="email" class="form-control" name="email" id="email" value=""
                                 placeholder="Masukan Email" required>
+
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -49,25 +51,34 @@
                     </div>
                     <div class="mb-3 row">
                         <label for="tlp" class="col-sm-3 col-form-label">Nomor Telepon<span
+
                                 style="color:red;">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="tlp" name="tlp"
+
                                 placeholder="Masukan Nomor Telepon">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="date" class="col-sm-3 col-form-label">Tanggal lahir<span
+
                                 style="color:red;">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input type="date" class="form-control" id="date" name="date"
+
                                 placeholder="Masukan Tanggal Lahir">
+
+
                         </div>
                     </div>
 
                     <div class="mb-3 row">
+
                         <label for="foto" class="col-sm-3 col-form-label">Foto Profile</label>
+
+
                         <div class="col-sm-9">
                             <input type="hidden" name="foto">
                             <input type="file" class="form-control" accept=".png, .jpg, .jpeg" id="inputFoto"
