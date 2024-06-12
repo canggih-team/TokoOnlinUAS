@@ -7,7 +7,6 @@
                 <h4 style="font-size: 16px;">Export data transaksi</h4>
             </div>
             <div class="card-body">
-
                 <div class="d-flex flex-row gap-3">
                     <div class="d-flex flex-column">
                         <label for="dateStart">Tanggal Mulai</label>
@@ -19,8 +18,6 @@
                     </div>
                 </div>
                 <button class="btn btn-success mt-4"> Export</button>
-
-
             </div>
         </div>
         <div class="card">
@@ -28,7 +25,6 @@
                 <h4 style="font-size: 16px;">Export data product</h4>
             </div>
             <div class="card-body">
-
                 <div class="d-flex flex-row gap-3">
                     <div class="d-flex flex-column">
                         <label for="dateStart">Tanggal Mulai</label>
@@ -40,8 +36,6 @@
                     </div>
                 </div>
                 <button class="btn btn-success mt-4"> Export</button>
-
-
             </div>
         </div>
     </div>

@@ -21,9 +21,7 @@
                         <th>Nama Karyawan</th>
                         <th>Role</th>
                         <th>Status</th>
-
                         <th>Action</th>
-
                     </tr>
                 </thead>
                 <tbody>
