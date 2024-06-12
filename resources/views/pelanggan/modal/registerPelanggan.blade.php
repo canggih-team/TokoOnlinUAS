@@ -9,19 +9,21 @@
                 <form action="{{ route('storePelanggan') }}" method="POST">
                     @csrf
                     <div class="mb-3 row">
-                        <label for="nama" class="col-sm-3 col-form-label">Name <span
+
+                        <label for="nama" class="col-sm-3 col-form-label">Nama<span
                                 style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" name="name" id="nama" value=""
-                                placeholder="Your name" required>
+                                placeholder="Masukan Nama" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="email" class="col-sm-3 col-form-label">Email <span
+                        <label for="email" class="col-sm-3 col-form-label">Email<span
                                 style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="email" class="form-control" name="email" id="email" value=""
-                                placeholder="Your email" required>
+                                placeholder="Masukan Email" required>
+
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -29,45 +31,54 @@
                                 style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="password" class="form-control" name="password" id="password"
-                                placeholder="Your Password" required>
+                                placeholder="Masukan Password" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="alamat" class="col-sm-3 col-form-label">Address 1 <span
+                        <label for="alamat" class="col-sm-3 col-form-label">Alamat Jalan <span
                                 style="color:red;">*</span></label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="alamat" name="alamat"
-                                placeholder="Input Address 1" required>
+                                placeholder="Masukan Alamat Jalan" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="alamat" class="col-sm-3 col-form-label">Address 2 </label>
+                        <label for="alamat" class="col-sm-3 col-form-label">Alamat Rumah </label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" name="alamat2" id="alamat"
-                                placeholder="Input Address 2">
+                                placeholder="Masukan Alamat Rumah">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="tlp" class="col-sm-3 col-form-label">Phone Number <span
+                        <label for="tlp" class="col-sm-3 col-form-label">Nomor Telepon<span
+
                                 style="color:red;">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="tlp" name="tlp"
-                                placeholder="Input phone number">
+
+                                placeholder="Masukan Nomor Telepon">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="date" class="col-sm-3 col-form-label">Date of birth <span
+                        <label for="date" class="col-sm-3 col-form-label">Tanggal lahir<span
+
                                 style="color:red;">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input type="date" class="form-control" id="date" name="date"
-                                placeholder="Input phone number">
+
+                                placeholder="Masukan Tanggal Lahir">
+
+
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="foto" class="col-sm-3 col-form-label">Foto Product</label>
+
+                        <label for="foto" class="col-sm-3 col-form-label">Foto Profile</label>
+
+
                         <div class="col-sm-9">
                             <input type="hidden" name="foto">
                             <input type="file" class="form-control" accept=".png, .jpg, .jpeg" id="inputFoto"
@@ -79,7 +90,7 @@
                     <button type="submit" class="btn btn-success col-sm-12">Register</button>
                     </p>
                     <button type="button" class="btn btn-danger col-sm-12"data-bs-dismiss="modal">Close</button>
-                    
+
                 </form>
             </div>
 

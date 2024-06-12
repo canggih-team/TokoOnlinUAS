@@ -26,7 +26,10 @@
                             <td>{{ $item->alamat }}</td>
                             <td>{{ $item->total_harga }}</td>
                             <td>
-                                <span class="align-middle {{ $item->status === 'Paid' ? 'badge bg-success text-white' : 'badge bg-danger text-white' }}">
+
+                                <span
+                                    class="align-middle {{ $item->status === 'Paid' ? 'badge bg-success text-white' : 'badge bg-danger text-white' }}">
+
                                     {{ $item->status }}
                                 </span>
                             </td>
@@ -44,6 +47,8 @@
             </div>
         </div>
     </div>
+
+
 
     <h1>Transactions Report</h1>
     <table border="1" width="100%">
@@ -76,4 +81,5 @@
         @endforeach
         </tbody>
     </table>
+
 @endsection
