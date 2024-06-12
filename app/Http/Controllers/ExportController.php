@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Dompdf\Dompdf;
+use App\Models\transaksi;
 
 class ExportController extends Controller
 {
@@ -16,7 +17,8 @@ class ExportController extends Controller
         $transactions = []; // Your logic to get transactions between $dateStart and $dateEnd
 
         // Load the view and pass the data
-        $html = view('exports.transaksi', compact('transaksi'))->render();
+        $data = transaksi::paginate(10);
+        $html = view('admin.page.transaksi', ['title' => "Transaksi", 'name' => 'Transaksi', 'data' => $data]);
 
         // Initialize Dompdf
         $dompdf = new Dompdf();
@@ -25,7 +27,7 @@ class ExportController extends Controller
         $dompdf->render();
 
         // Stream the PDF back to the browser
-        return $dompdf->stream('transaksi.pdf');
+        return $dompdf->stream('transaction.pdf');
     }
 
     public function exportProduct(Request $request)
@@ -37,8 +39,8 @@ class ExportController extends Controller
         $products = []; // Your logic to get products between $dateStart and $dateEnd
 
         // Load the view and pass the data
-        $html = view('exports.product', compact('product'))->render();
-
+        $data = transaksi::paginate(3);
+        $html = view('admin.page.product',  ['title' => "Product", 'name' => 'Product', 'data' => $data]);
         // Initialize Dompdf
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
