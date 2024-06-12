@@ -5,7 +5,10 @@
         <div class="" style="width: 30%;">
             <div class="card" style="width: 18rem;">
                 <div class="card-header">
-                    Kategory
+
+                    Kategori
+
+
                 </div>
                 <div class="card-body">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -113,7 +116,10 @@
                 @foreach ($data as $p)
                     <div class="card" style="width:200px;">
                         <div class="card-header m-auto">
-                            <img src="{{ asset('storage/product/' . $p->foto) }}" alt=""
+
+                            <img src="{{ asset('storage/product/' . $p->foto) }}" alt="baju 1"
+
+
                                 style="width: 100%;height:130px; object-fit: cover; padding:0;">
                         </div>
                         <div class="card-body">

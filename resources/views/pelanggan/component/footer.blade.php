@@ -7,7 +7,9 @@
     </div>
     <div class="title-middle w-25">
         <div class="header-title fs-4 mb-2 font-weight-bolder">
-            Tentang Kami
+
+
+
         </div>
         <ul class="list-unstyled">
             <li>
@@ -32,6 +34,7 @@
             <i class="fa-brands fa-square-facebook fa-2x"></i>
             <i class="fa-brands fa-whatsapp fa-2x"></i>
             <i class="fa-brands fa-linkedin fa-2x"></i>
+
         </div>
     </div>
 </div>

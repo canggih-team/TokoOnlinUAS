@@ -15,8 +15,9 @@
                     <a class="nav-link {{ Request::path() == 'shop' ? 'active' : '' }}" href="/shop">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::path() == 'contact' ? 'active' : '' }}" href="/contact">Contact
-                        Us</a>
+
+                    <a class="nav-link {{ Request::path() == 'contact' ? 'active' : '' }}" href="/contact">About Us</a>
+
                 </li>
                 @auth
                     <div class="select" tabindex="0" role="button">

@@ -15,7 +15,10 @@
                             <th>Nama Penerima</th>
                             <th>Total Transaksi</th>
                             <th>Status</th>
-                            <th>#</th>
+
+                            <th>Action</th>
+
+
                         </tr>
                     </thead>
                     <tbody class="align-middle text-center">

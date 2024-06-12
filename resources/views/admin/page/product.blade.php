@@ -52,6 +52,7 @@
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
                                 </td>
+
                             </tr>
                         @endforeach
                     @endif
@@ -71,52 +72,8 @@
     <div class="tampilData" style="display: none;"></div>
     <div class="tampilEditData" style="display: none;"></div>
 
-    <h1>Products Report</h1>
-    <table class="table table-responsive table-striped">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Foto</th>
-                <th>Date In</th>
-                <th>SKU</th>
-                <th>Product Name</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Stock</th>
-                <th>#</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if ($data->isEmpty())
-                <tr class="text-center">
-                    <td colspan="9">Belum ada barang</td>
-                </tr>
-            @else
-                @foreach ($data as $y => $x)
-                    <tr class="align-middle">
-                        <td>{{ ++$y }}</td>
-                        <td>
-                            <img src="{{ asset('storage/product/' . $x->foto) }}" style="width:100px;">
-                        </td>
-                        <td>{{ $x->created_at }}</td>
-                        <td>{{ $x->sku }}</td>
-                        <td>{{ $x->nama_product }}</td>
-                        <td>{{ $x->type . ' ' . $x->kategory }}</td>
-                        <td>{{ $x->harga }}</td>
-                        <td>{{ $x->quantity }}</td>
-                        <td>
-                            <input type="hidden" id="sku" value="{{ $x->sku }}">
-                            <button class="btn btn-info editModal" data-id="{{ $x->id }}">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="btn btn-danger deleteData" data-id="{{ $x->id }}">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </td>
-                    </tr>
-            @endforeach
-        </tbody>
-    </table>
+
+
 
     <script>
         $('#addData').click(function() {
@@ -169,8 +126,10 @@
             });
 
             Swal.fire({
-                title: 'Hapus data?',
-                text: "Kamu yakin untuk menghapus SKU " + sku + "?",
+
+                title: 'Hapus data ?',
+                text: "Kamu yakin untuk menghapus SKU " + sku + " ?",
+
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -191,6 +150,9 @@
                             }
                         },
                         error: function(xhr, status, error) {
+
+                            // Tampilkan notifikasi error jika terjadi kesalahan
+
                             Swal.fire({
                                 title: 'Error',
                                 text: 'Terjadi kesalahan saat menghapus data',
@@ -199,7 +161,9 @@
                         }
                     });
                 }
-            });
+
+            })
+
         });
     </script>
 @endsection
