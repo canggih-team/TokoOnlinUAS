@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Dompdf\Dompdf;
 use App\Models\transaksi;
+use App\Models\product;
 
 class ExportController extends Controller
 {
-    public function exportTransaction(Request $request)
+    public function exportTransaksi(Request $request)
     {
         $dateStart = $request->input('dateStart');
         $dateEnd = $request->input('dateEnd');
@@ -39,8 +40,9 @@ class ExportController extends Controller
         $products = []; // Your logic to get products between $dateStart and $dateEnd
 
         // Load the view and pass the data
-        $data = transaksi::paginate(3);
-        $html = view('admin.page.product',  ['title' => "Product", 'name' => 'Product', 'data' => $data]);
+        $data = product::paginate(3);
+        $html =  view('admin.page.product', ['title' => "Product", 'name' => 'Product', 'data' => $data]);
+
         // Initialize Dompdf
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
